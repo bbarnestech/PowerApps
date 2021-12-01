@@ -1,1 +1,27 @@
-//
+//Collect signature from pen input
+ClearCollect(
+  Signature, {
+    Image:PenInput1.Image, imageName:"nameYourFile.jpg"
+  }
+);
+
+//Add signature to email attachments collection for processing
+Clear(
+  EmailAttachments
+);
+ForAll(
+  Signature, Collect(
+    EmailAttachments, {
+      ContentBytes: Image, Name: imageName
+    }
+  )
+);
+
+//Send signature to processing mailbox.  Power Automate flow triggered on new email arrival which can process and store the signature in your desired location.
+
+Office365.SendEmail(
+  "signatures@yourdomain.com", Subject, Body, {
+    Attachments:EmailAttachments, Importance:"Normal", IsHtml:true
+  }
+);
+  
