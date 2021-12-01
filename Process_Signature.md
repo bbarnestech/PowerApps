@@ -3,7 +3,8 @@
 2. Mailbox to process signatures as email attachments
 3. Power Automate flow to manipulate signature for your needs
 
-Collect signature from pen input
+**Power Apps Steps**
+1. Collect signature from pen input
 ```
 ClearCollect(
   Signature, {
@@ -12,7 +13,7 @@ ClearCollect(
 );
 ```
 
-Add signature to email attachments collection for processing
+2. Add signature to email attachments collection for processing
 ```
 Clear(
   EmailAttachments
@@ -25,7 +26,7 @@ ForAll(
   )
 );
 ```
-Send signature to processing mailbox.  Power Automate flow triggered on new email arrival which can process and store the signature in your desired location.
+3. Send signature to processing mailbox.  Power Automate flow triggered on new email arrival which can process and store the signature in your desired location.
 ```
 Office365.SendEmail(
   "signatures@yourdomain.com", Subject, Body, {
@@ -33,6 +34,9 @@ Office365.SendEmail(
   }
 );
 ```
+
+&nbsp;
+&nbsp;
 
 Once the signature is sent to the processing email address it can be manipulated in a number of ways 
 including upload to sharepoint list or other data storage compatible with Power Automate.
