@@ -9,6 +9,9 @@ In this example the replaceMe_LogoVariable is replaced with a company logo image
 
 A Power Automate flow must be created.  In the example case this is an instant cloud flow that is triggered by Power Apps. The Power Apps trigger passes the HTML template to the flow for processing
 
+&nbsp;
+&nbsp;
+
 **Flow Steps:**
 1. Create steps to gather necessary dynamic data.  In the example case a company logo is retrieved from Sharepoint by utilizing the Get File Content step.  
 2. Use the Initialize Variable step to create a variable that will hold the dynamic data information to be inserted into the template.  the variable used in this case is 'logo' 
@@ -22,5 +25,8 @@ A Power Automate flow must be created.  In the example case this is an instant c
    ```
 4. Use the OneDrive Create File step to complete the formatting of the HTML template.  File Content should be the output of the Compose step.
 5. Use the OneDrive Convert File step to convert the HTML template to a PDF document.  File should be the ID output from the Create File step.
+
+&nbsp;
+&nbsp;
 
 The PDF file can now be sent or stored based upon your needs.  
