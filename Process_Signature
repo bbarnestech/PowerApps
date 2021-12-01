@@ -25,7 +25,6 @@ ForAll(
 );
 
 //Send signature to processing mailbox.  Power Automate flow triggered on new email arrival which can process and store the signature in your desired location.
-
 Office365.SendEmail(
   "signatures@yourdomain.com", Subject, Body, {
     Attachments:EmailAttachments, Importance:"Normal", IsHtml:true
