@@ -1,4 +1,4 @@
-REQUIREMENTS
+**REQUIREMENTS**
 1. HTML template stored in Power Apps HTML TEXT object.  The HTML template must have unique variables where dynamic data or images need to be added to the document.
   ```
   EXAMPLE  <img src='replaceMe_LogoVariable' height='80'>
@@ -9,7 +9,7 @@ In this example the replaceMe_LogoVariable is replaced with a company logo image
 
 A Power Automate flow must be created.  In the example case this is an instant cloud flow that is triggered by Power Apps. The Power Apps trigger passes the HTML template to the flow for processing
 
-Flow Steps:
+**Flow Steps:**
 1. Create steps to gather necessary dynamic data.  In the example case a company logo is retrieved from Sharepoint by utilizing the Get File Content step.  
 2. Use the Initialize Variable step to create a variable that will hold the dynamic data information to be inserted into the template.  the variable used in this case is 'logo' 
    The variable value should equal the dataUri of the dynamic data gathered in step 1.  
