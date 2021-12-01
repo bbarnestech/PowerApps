@@ -1,4 +1,4 @@
-# Microsoft PowerApps Code Segments
+# Microsoft PowerApps Helpers
 
 Helpful code segments and tips for Microsoft PowerApps. 
 
